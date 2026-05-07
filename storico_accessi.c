@@ -16,3 +16,25 @@ void stampaStorico(storico_accessi a){
     printf("matricola studente: %d",a.matricolAcc);
     printf("tipo di accesso: %d",a.tipoAcc);
 }
+struct node {
+    storico_accessi value;
+    struct node *next;
+};
+
+list newList(void) {
+    return NULL;
+}
+
+int emptyList(list l) {
+    return l == NULL;
+}
+list consList(storico_accessi val, list l) {
+    list new_node = (list)malloc(sizeof(struct node));
+    if (new_node == NULL) {
+        fprintf(stderr, "Errore: impossibile allocare memoria per il nuovo nodo.\n");
+        exit(EXIT_FAILURE);
+    }
+    new_node->value = val;
+    new_node->next = l;
+    return new_node;
+}
