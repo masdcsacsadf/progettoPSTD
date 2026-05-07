@@ -1,12 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include<string.h>
-#include<data_psd.h>
-#include<aula_studio.h>//prendiamo la variabile matricola
-#include<prenotazione.h>
-#include<noprenotati.h>
-#include<lista.h>
-#include<coda.h>
+
 
 
 struct typedef{
