@@ -5,6 +5,7 @@
 #include<storico_accessi.h>
 #include<aula_studio.h>
 #include<data.h>
+#include<report.h>
 
 /*lo scopo di questo file e quello di contenere tutte le funzioni per far funzionare
 il nostro progetto.il motivo di questa scelta e per rendere piu facile la 
@@ -23,4 +24,5 @@ typedef struct{
     list storico_accessi;
     posti sala[100];
     dataCorrente time;
+    report rapporto;
 }dati;
