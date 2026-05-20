@@ -10,6 +10,16 @@ struct typedef{
 /*variabile 'stato' server per controllare se lo studente :ha il posto =2 o ha prenotato=1 o sta aspettano nella coda di attessa =0 */
 }studente;
 
+int getMatricola(studente s){
+    return s.matricola;
+}
+
+
+void setMatricola(studente s, int m){
+    s.matricola = m;
+}
+
+
 struct node {
     studente value;
     struct node *next;
