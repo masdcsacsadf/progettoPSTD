@@ -19,6 +19,22 @@ void setMatricola(studente s, int m){
     s.matricola = m;
 }
 
+void setNome(studente s, char nom){
+    s.nome = nom;
+}
+
+void setCorso(studente s, char co){
+    s.corso = co;
+}
+
+
+char getNome(studente s){
+    return s.nome;
+}
+
+char getCorso(studente s){
+    return s.corso;
+}
 
 struct node {
     studente value;
