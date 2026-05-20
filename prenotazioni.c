@@ -90,18 +90,6 @@ int sizeList(list l) {
 }
 
 
-int posItem(list l, item val) {
-    int pos = 1;
-    while (l != NULL) {
-        if (eq(l->value, val)) {
-            return pos;
-        }
-        pos++;
-        l = l->next;
-    }
-    return -1;
-}
-
 
 prenotazioni getItem(list l, int pos) {
     int count = 1;
@@ -116,18 +104,7 @@ prenotazioni getItem(list l, int pos) {
 }
 
 
-prenotazioni reverseList(list l) {
-    list prev = NULL;
-    list current = l;
-    list next = NULL;
-    while (current != NULL) {
-        next = current->next;
-        current->next = prev;
-        prev = current;
-        current = next;
-    }
-    return prev;
-}
+
 
 
 void outputList(list l) {
