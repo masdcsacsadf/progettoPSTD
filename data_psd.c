@@ -12,6 +12,10 @@ typedef struct{
 	int ora;
 }dataCorrente;
 
+int getAnno(data t){
+	return data.anno;
+}
+
 data impostaData(int a,int m,int g){
 	data t;
 	t.anno=a;
