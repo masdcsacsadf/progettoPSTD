@@ -10,7 +10,7 @@ struct typedef{
     int ora_max;//ora  di uscita dello studente dalla sala
     data data;
     int postoass;//il posto asseganto alla prenotazione
-    int flagCheck-in//inidica se lo studente ha fatto il check-in della prnotazione
+    int flagCheckIn;//inidica se lo studente ha fatto il check-in della prnotazione
 }prenotazioni
 
 
@@ -23,6 +23,18 @@ void setData(prenotazioni p, data d){
     p.data = d;
 }
 
+
+void setMatr(prenotazioni p, int m){
+    p.matricolastud = m;
+}
+
+void setMinO(prenotazioni p, int min){
+    p.ora_min = min;
+}
+
+void setMaxO(prenotazioni p, int max){
+    p.ora_max = max;
+}
 
 list newList(void) {
     return NULL;
