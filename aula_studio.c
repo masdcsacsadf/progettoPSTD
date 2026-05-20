@@ -13,4 +13,6 @@ struct typedef{
 	int oraMax;
 }posti;
 
-
+int getStatus(){
+	return status;
+}
