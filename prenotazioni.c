@@ -8,7 +8,7 @@ struct typedef{
     int matricolastud;//matricola della struct studenti
     int ora_min;// ora di entrata dello studente nella sala
     int ora_max;//ora  di uscita dello studente dalla sala
-    data_psd data;
+    data data;
     int postoass;//il posto asseganto alla prenotazione
     int flagCheck-in//inidica se lo studente ha fatto il check-in della prnotazione
 }prenotazioni
@@ -18,6 +18,10 @@ struct node {
     prenotazioni value;
     struct node *next;
 };
+
+void setData(prenotazioni p, data d){
+    p.data = d;
+}
 
 
 list newList(void) {
