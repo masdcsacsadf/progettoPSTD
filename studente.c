@@ -14,6 +14,13 @@ int getMatricola(studente s){
     return s.matricola;
 }
 
+void setStato(studente s, int stat){
+    s.stato = stat;
+}
+
+int getStato(studente s){
+    return s.status;
+}
 
 void setMatricola(studente s, int m){
     s.matricola = m;
