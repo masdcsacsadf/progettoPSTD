@@ -26,6 +26,6 @@ typedef struct{
     dataCorrente time;
     report rapporto;
     list studenti;
-    bool flagLib = 0;
+    int flagLib = 0;
     int limitPren = 0;
 }dati;
