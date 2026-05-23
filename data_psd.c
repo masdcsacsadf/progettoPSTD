@@ -8,7 +8,7 @@ typedef struct{
 }data;
 
 typedef struct{
-	data date;
+	data datecor;
 	int ora;
 }dataCorrente;
 
