@@ -20,8 +20,11 @@ int getStatus(){
 
 
 /*
-funzione che scorre l'array dei posti e ritorna -1 in caso il posto sia libero
-se l'array non ha nessun posto libero ritorna il valore -2
+getLibero
+prende come parametri l array di posti "p" e la dimenstione del array "n"
+cerca nel array un posto che ha lo status ==-1.
+se lo trova,restituisce la varibile i,usata per ciclare il ciclo
+se non lo trova,resituisce -1.
 */
 int getLibero(posti p[], int n){
 	for(int i=0;i<n; i++){
