@@ -55,9 +55,9 @@ dataCorrente impostaDataCorr(int a, int m, int g, int o){
 
 	dataCorrente dc;
 
-	dc.date = impostaData(a,m,g);
+	dc.datecor = impostaData(a,m,g);
 
-	if( dc.date.anno == -1){
+	if( dc.datecor.anno == -1){
 		printf("ERRORE DATA INCORRETTA");
 		dc.ora = -1;
 		return dc;
@@ -75,15 +75,15 @@ dataCorrente impostaDataCorr(int a, int m, int g, int o){
 
 int dataValidCheck(int n, data d, dataCorrente dc){
 
-	if(d.anno < dc.date.anno){
+	if(d.anno < dc.datecor.anno){
 
 		return 1;
 
-	}else if(d.mese < dc.date.mese){
+	}else if(d.mese < dc.datecor.mese){
 
 		return 1;
 
-	}else if(d.mese == dc.date.mese && d.giorno < dc.date.giorno){
+	}else if(d.mese == dc.datecor.mese && d.giorno < dc.datecor.giorno){
 
 		return 1;
 
