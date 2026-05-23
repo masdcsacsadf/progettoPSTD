@@ -93,5 +93,9 @@ int dataValidCheck(int n, data d, dataCorrente dc){
 
 	}
 
+int dateUguali(data a,dataCorrente b,int h)
+	if((a.anno==b.datecor.anno)&&(a.mese==b.datecor.mese)&&(a.giorno==b.datecor.giorno)&&(h==b.ora){
+		return 1;
+	}
 	return 0;
 }
