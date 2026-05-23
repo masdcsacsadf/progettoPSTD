@@ -23,11 +23,11 @@ int getStatus(){
 funzione che scorre l'array dei posti e ritorna -1 in caso il posto sia libero
 se l'array non ha nessun posto libero ritorna il valore -2
 */
-int getLibero(posti p[]. int n){
+int getLibero(posti p[], int n){
 	for(int i=0;i<n; i++){
 		if(p[i].status==-1){
-			return -1;
+			return i;
 		}
 	}
-	return -2; 
+	return -1; 
 }
