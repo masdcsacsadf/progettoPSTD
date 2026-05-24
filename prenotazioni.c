@@ -19,6 +19,10 @@ struct node {
     struct node *next;
 };
 
+data getData(data t){
+	return t;
+}
+
 void setFlag(prenotazioni p, int n){
     p.flagCheckIn = n;
 }
