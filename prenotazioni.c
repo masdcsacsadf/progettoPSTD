@@ -19,6 +19,10 @@ struct node {
     struct node *next;
 };
 
+int getOraMax(prenotazioni t){
+	return t.ora_max
+}
+
 data getData(prenotazioni t){
 	return t.data;
 }
