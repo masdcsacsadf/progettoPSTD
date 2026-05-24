@@ -38,3 +38,13 @@ list consList(storico_accessi val, list l) {
     new_node->next = l;
     return new_node;
 }
+list rimuoviElementoTesta (list l, int pos){
+    list l1, prec; // puntatore al nodo da eliminare
+    int i;
+    if(pos == 0 && l != NULL) { // eliminazione in posizione 0
+        l1 = l;
+        l = tailList(l);
+        free(l1);
+    }
+    return l
+}
