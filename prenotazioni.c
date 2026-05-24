@@ -19,8 +19,8 @@ struct node {
     struct node *next;
 };
 
-data getData(data t){
-	return t;
+data getData(prenotazioni t){
+	return t.data;
 }
 
 void setFlag(prenotazioni p, int n){
