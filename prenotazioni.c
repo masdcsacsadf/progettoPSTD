@@ -111,7 +111,34 @@ prenotazioni getItem(list l, int pos) {
     return NULLITEM;
 }
 
+list removeList(list l, int pos)
+{
+    list l1, prec; // l1 è usato per memorizzare temporaneamente il nodo da eliminare, prec per tenere traccia del nodo precedente
+    int i;
 
+    if (pos == 0 && l != NULL) { // Se la posizione è 0 e la lista non è vuota, rimuovere il primo nodo
+        l1 = l; // l1 punta al primo nodo, che è quello da eliminare
+        l = tailList(l); // Imposta l all'inizio della lista escluso il primo nodo (la "coda" della lista)
+        free(l1); // Libera la memoria allocata per il nodo eliminato
+    }
+    else { // Se il nodo da eliminare non è il primo
+        i = 0;
+        prec = l; // Imposta prec all'inizio della lista
+        while (i < pos - 1 && prec != NULL) { // Scorri la lista fino alla posizione precedente a quella del nodo da eliminare
+            prec = prec->next; // Sposta prec al nodo successivo
+            i++; // Incrementa il contatore
+        }
+
+        // Se prec non è NULL, siamo arrivati al nodo che precede quello da eliminare
+        if (prec != NULL && prec->next != NULL) { // Verifica che il nodo da eliminare esista (prec->next non sia NULL)
+            l1 = prec->next; // l1 punta al nodo da eliminare
+            prec->next = l1->next; // Il nodo precedente ora punta al nodo successivo a quello eliminato
+            free(l1); // Libera la memoria allocata per il nodo eliminato
+        }
+    }
+
+    return l; // Restituisce l'inizio della lista, potenzialmente modificato se il primo nodo è stato eliminato
+}
 
 
 
