@@ -19,6 +19,10 @@ struct node {
     struct node *next;
 };
 
+int getMatricolaPRE(prenotazioni t){
+	return t.matricolastu;
+}
+
 int getOraMax(prenotazioni t){
 	return t.ora_max
 }
