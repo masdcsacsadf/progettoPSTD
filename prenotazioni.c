@@ -24,7 +24,11 @@ int getMatricolaPRE(prenotazioni t){
 }
 
 int getOraMax(prenotazioni t){
-	return t.ora_max
+	return t.ora_max;
+}
+
+int getOraMin(prenotazioni t){
+	return t.ora_min;
 }
 
 data getData(prenotazioni t){
