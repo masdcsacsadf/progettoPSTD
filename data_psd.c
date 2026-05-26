@@ -75,7 +75,6 @@ dataCorrente impostaDataCorr(int a, int m, int g, int o){
 
 
 int dataValidCheck(int n, data d, dataCorrente dc){
-
 	if(d.anno < dc.datecor.anno){
 
 		return 1;
@@ -93,6 +92,8 @@ int dataValidCheck(int n, data d, dataCorrente dc){
 		return 1;
 
 	}
+	return 0;
+}
 
 int dateUguali(data a,dataCorrente b,int h)
 	if((a.anno==b.datecor.anno)&&(a.mese==b.datecor.mese)&&(a.giorno==b.datecor.giorno)&&(h==b.ora){
