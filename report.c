@@ -11,19 +11,19 @@ typedef struct{
 }report;
 
 report setPreTot(report t,int n){
-  t.preTot=n;
+  t.preTot=t.preTot+n;
   return t;
 }
 report seTaccessoT(report t,int n){
-  t.accessoT=n;
+  t.accessoT=t.accessoT+n;
   return t;
 }
 report setNoshow(report t,int n){
-  t.noShow=n;
+  t.noShow=t.noShow+n;
   return t;
 }
 report setStuAttessa(report t,int n){
-  t.stuAttessa=n;
+  t.stuAttessa=stuAttessa+n;
   return t;
 }
 report setOraMin(report t,int n){
