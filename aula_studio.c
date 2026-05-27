@@ -34,3 +34,16 @@ int getLibero(posti p[], int n){
 	}
 	return -1; 
 }
+
+void puliziaAulaStudio(posti a[],int n){
+    for(int i=0;i<n;i++){
+        a[i].status=-1;
+        a[i].oraMax==0;        
+    }
+}
+posto setDatiPosto(posto p,int m,int ora){
+    p.status=m;
+    p.oraMax=ora;
+    return p;
+}
+
