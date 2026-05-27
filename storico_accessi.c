@@ -27,13 +27,13 @@ list newList(void) {
 int emptyList(list l) {
     return l == NULL;
 }
-list consList(storico_accessi val, list l) {
+list consList(int matr, int tipo, list l) {
     list new_node = (list)malloc(sizeof(struct node));
     if (new_node == NULL) {
         fprintf(stderr, "Errore: impossibile allocare memoria per il nuovo nodo.\n");
         exit(EXIT_FAILURE);
     }
-    new_node->value = val;
+    new_node->value = creaIst(matr, tipo, new_node -> value);
     new_node->next = l;
     return new_node;
 }
