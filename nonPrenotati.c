@@ -9,6 +9,10 @@ struct typedef{
 	int matricolaStud;
 } nonPrenotati;
 
+int getNoprenMatr(nonPrenotati nop){
+	return nop.matricolaStud;
+}
+
 
 struct node {       // Definizione della struttura "node", che rappresenta un singolo nodo nella coda.
      nonPrenotati value;    // Campo "value" di tipo "item" per memorizzare il valore dell'elemento nel nodo.
