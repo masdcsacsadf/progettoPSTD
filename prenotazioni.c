@@ -152,7 +152,16 @@ list removeList(list l, int pos)
     return l; // Restituisce l'inizio della lista, potenzialmente modificato se il primo nodo è stato eliminato
 }
 
-
+list removeTuttaList(list l, int pos){
+    list l1; // l1 è usato per memorizzare temporaneamente il nodo da eliminare, prec per tenere traccia del nodo precedente
+    int i;
+    if (pos == 0 && l != NULL) { // Se la posizione è 0 e la lista non è vuota, rimuovere il primo nodo
+        l1 = l; // l1 punta al primo nodo, che è quello da eliminare
+        l = tailList(l); // Imposta l all'inizio della lista escluso il primo nodo (la "coda" della lista)
+        free(l1); // Libera la memoria allocata per il nodo eliminato
+    }
+    return l; // Restituisce l'inizio della lista, potenzialmente modificato se il primo nodo è stato eliminato
+}
 
 void outputList(list l) {
     while (l != NULL) {
