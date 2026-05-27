@@ -169,5 +169,34 @@ void outputList(list l) {
         printf(" ");
         l = l->next;
     }
+
+list creaListaSUP(list l,dataCorrente d){
+    int ora,pos=0;
+    data temp;
+    prenotazioni t;
+    lista l2;
+    while(l!=NULL){
+        t=l.value;
+        temp=getData(t);
+        ora=t.ora_min;
+        if(dataValidCheck(n,temp,d)==1){
+            l2=consList(l.value,l2);
+        }
+        l = l->next;
+    }
+    return l2;
+}
+
+prenotazioni getPrenotazioneControl(list l, dataCorrente t) {
+    data temp;
+    while (l != NULL) {
+        data=getData(l->value)
+        if (dataValidCheck(l->value.ora_min,temp,t)==0){
+            return l->value;
+        }
+        l = l->next;
+    }
+    return NULLITEM;
+}
     printf("\n");
 }
