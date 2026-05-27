@@ -6,8 +6,7 @@ struct typedef{
     int tipoAcc;//come ha fatto l accesso l utente
 }storico_accessi
 
-storico_accessi creaIst(int a,int b){
-    storico_accessi c=(storico_accessi)malloc(sizeof(struct storico_accessi));
+storico_accessi creaIst(int a,int b,storico_accessi c){
     c.matricolAcc=a;
     c.tipoAcc=b;
     return c;
