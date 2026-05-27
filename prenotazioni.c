@@ -19,6 +19,10 @@ struct node {
     struct node *next;
 };
 
+int getFlagCheIn(prenotazioni p;){
+	return p.flagCheckIn;
+}
+
 int getMatricolaPRE(prenotazioni t){
 	return t.matricolastu;
 }
