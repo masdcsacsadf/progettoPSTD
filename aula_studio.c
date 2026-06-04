@@ -14,11 +14,11 @@ struct typedef{
 	int oraMax;
 }posti;
 
-int getStatus(){
-	return status;
+int getStatus(posti p){
+	return p.status;
 }
-int getOraMax(){
-	return oraMax;
+int getOraMax(posti p){
+	return p.oraMax;
 }
 
 /*
