@@ -17,7 +17,9 @@ struct typedef{
 int getStatus(){
 	return status;
 }
-
+int getOraMax(){
+	return oraMax;
+}
 
 /*
 getLibero
