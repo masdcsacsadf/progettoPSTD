@@ -1,13 +1,14 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
+#include"studente.h"
 
-struct typedef{
+typedef struct{
     char nome[100];
     int matricola;
     char corso[100];// corso di laurea dello studente
     int stato;
-/*variabile 'stato' server per controllare se lo studente :ha il posto =2 o ha prenotato=1 o sta aspettano nella coda di attessa =0 */
+/*variabile 'stato' server per controllare se lo studente :ha il posto =2 o ha prenotato=1 o sta aspettano nella coda di attessa =0, valore neutro = -1 */
 }studente;
 
 int getMatricola(studente s){
@@ -19,7 +20,7 @@ void setStato(studente s, int stat){
 }
 
 int getStato(studente s){
-    return s.status;
+    return s.stato;
 }
 
 void setMatricola(studente s, int m){
@@ -27,11 +28,11 @@ void setMatricola(studente s, int m){
 }
 
 void setNome(studente s, char nom){
-    s.nome = nom;
+    s.nome[LUNG] = nom;
 }
 
 void setCorso(studente s, char co){
-    s.corso = co;
+    s.corso[LUNG] = co;
 }
 
 
@@ -43,23 +44,50 @@ char getCorso(studente s){
     return s.corso;
 }
 
+studente ricercaMatricola(list3 l, int m){
+     while (l!=NULL)
+    {
+        if (l->value.matricola == m)
+        {
+            return l->value;
+        }
+
+    }
+
+    return NULLITEM;
+}
+
+void ricercaSettaStato(list3 l, int m, int v){
+     while (l!=NULL)
+    {
+        if (l->value.matricola == m)
+        {
+            setStato(l->value,v);
+            return;
+        }
+
+    }
+
+    return;
+}
+
 struct node {
     studente value;
     struct node *next;
 };
 
-list newList(void) {
+list3 newList(void) {
     return NULL;
 }
 
 
-int emptyList(list l) {
+int emptyList(list3 l) {
     return l == NULL;
 }
 
 
-list consList(studente val, list l) 
-    list new_node = (list)malloc(sizeof(
+list3 consList(studente val, list3 l) {
+    list3 new_node = (list3)malloc(sizeof(struct node));
     if (new_node == NULL) {
         fprintf(stderr, "Errore: impossibile allocare memoria per il nuovo nodo.\n");
         exit(EXIT_FAILURE);
@@ -70,7 +98,7 @@ list consList(studente val, list l)
 }
 
 
-list tailList(list l) {
+list3 tailList(list3 l) {
     if (emptyList(l)) {
         fprintf(stderr, "Errore: impossibile ottenere la coda di una lista vuota.\n");
         exit(EXIT_FAILURE);
@@ -79,7 +107,7 @@ list tailList(list l) {
 }
 
 
-studente getFirst(list l) {
+studente getFirst(list3 l) {
     if (emptyList(l)) {
         fprintf(stderr, "Errore: impossibile ottenere il primo elemento di una lista vuota.\n");
         exit(EXIT_FAILURE);
@@ -88,7 +116,7 @@ studente getFirst(list l) {
 }
 
 
-int sizeList(list l) {
+int sizeList(list3 l) {
     int count = 0;
     while (l != NULL) {
         count++;
@@ -98,7 +126,7 @@ int sizeList(list l) {
 }
 
 
-int posItem(list l, studente val) {
+int posItem(list3 l, studente val) {
     int pos = 1;
     while (l != NULL) {
         if (eq(l->value, val)) {
@@ -111,7 +139,7 @@ int posItem(list l, studente val) {
 }
 
 
-studente getItem(list l, int pos) {
+studente getItem(list3 l, int pos) {
     int count = 1;
     while (l != NULL) {
         if (count == pos) {
@@ -122,3 +150,4 @@ studente getItem(list l, int pos) {
     }
     return NULLITEM;
 }
+
