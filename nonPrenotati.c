@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include <queue.h>  // Inclusione dell'header file "queue.h", che contiene le dichiarazioni per le funzioni di gestione della coda.
+#include "nonPrenotati.h"
 
-struct typedef{
+typedef struct{
 	int postoAsgn;
 	int ora_min;
 	int ora_max;
@@ -13,11 +13,21 @@ int getNoprenMatr(nonPrenotati nop){
 	return nop.matricolaStud;
 }
 
-
 struct node {       // Definizione della struttura "node", che rappresenta un singolo nodo nella coda.
      nonPrenotati value;    // Campo "value" di tipo "item" per memorizzare il valore dell'elemento nel nodo.
      struct node *next; // Puntatore "next" al prossimo nodo nella coda.
 };
+
+nonPrenotati inizializzaNoP(){
+    
+     nonPrenotati p;
+
+     p.postoAsgn=0;
+     p.ora_min=0;
+     p.ora_max=0;
+     p.matricolaStud=0;
+     return  p;
+}
 
 struct c_queue {          // Definizione della struttura "c_queue", che rappresenta la coda.
      struct node *head,*tail; // Puntatori "head" e "tail" rispettivamente al primo e all'ultimo nodo della coda.
