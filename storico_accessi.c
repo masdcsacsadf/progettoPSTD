@@ -20,15 +20,15 @@ struct node {
     struct node *next;
 };
 
-list newList(void) {
+list2 newList(void) {
     return NULL;
 }
 
-int emptyList(list l) {
+int emptyList(list2 l) {
     return l == NULL;
 }
-list consList(int matr, int tipo, list l) {
-    list new_node = (list)malloc(sizeof(struct node));
+list2 consList(int matr, int tipo, list2 l) {
+    list2 new_node = (list2)malloc(sizeof(struct node));
     if (new_node == NULL) {
         fprintf(stderr, "Errore: impossibile allocare memoria per il nuovo nodo.\n");
         exit(EXIT_FAILURE);
@@ -37,8 +37,8 @@ list consList(int matr, int tipo, list l) {
     new_node->next = l;
     return new_node;
 }
-list rimuoviElementoTesta (list l, int pos){
-    list l1, prec; // puntatore al nodo da eliminare
+list2 rimuoviElementoTesta (list2 l, int pos){
+    list2 l1, prec; // puntatore al nodo da eliminare
     int i;
     if(pos == 0 && l != NULL) { // eliminazione in posizione 0
         l1 = l;
