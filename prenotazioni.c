@@ -1,17 +1,19 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-#include<data_psd.h>
-#include "list.h"
+#include"data.h"
+#include"prenotazioni.h"
 
-struct typedef{
+
+
+typedef struct{
     int matricolastud;//matricola della struct studenti
     int ora_min;// ora di entrata dello studente nella sala
     int ora_max;//ora  di uscita dello studente dalla sala
     data data;
     int postoass;//il posto asseganto alla prenotazione
     int flagCheckIn;//inidica se lo studente ha fatto il check-in della prnotazione
-}prenotazioni
+}prenotazioni;
 
 
 struct node {
@@ -19,12 +21,12 @@ struct node {
     struct node *next;
 };
 
-int getFlagCheIn(prenotazioni p;){
+int getFlagCheIn(prenotazioni p){
 	return p.flagCheckIn;
 }
 
 int getMatricolaPRE(prenotazioni t){
-	return t.matricolastu;
+	return t.matricolastud;
 }
 
 int getOraMax(prenotazioni t){
@@ -70,8 +72,8 @@ int emptyList(list l) {
 }
 
 
-list consList(prenotazioni val, list l) 
-    list new_node = (list)malloc(sizeof(
+list consList(prenotazioni val, list l) {
+    list new_node = (list)malloc(sizeof(struct node));
     if (new_node == NULL) {
         fprintf(stderr, "Errore: impossibile allocare memoria per il nuovo nodo.\n");
         exit(EXIT_FAILURE);
@@ -169,18 +171,19 @@ void outputList(list l) {
         printf(" ");
         l = l->next;
     }
+}
 
 list creaListaSUP(list l,dataCorrente d){
     int ora,pos=0;
     data temp;
     prenotazioni t;
-    lista l2;
+    list l2;
     while(l!=NULL){
-        t=l.value;
+        t=l->value;
         temp=getData(t);
         ora=t.ora_min;
-        if(dataValidCheck(n,temp,d)==1){
-            l2=consList(l.value,l2);
+        if(dataValidCheck(ora,temp,d)==1){
+            l2=consList(l->value,l2);
         }
         l = l->next;
     }
@@ -190,13 +193,12 @@ list creaListaSUP(list l,dataCorrente d){
 prenotazioni getPrenotazioneControl(list l, dataCorrente t) {
     data temp;
     while (l != NULL) {
-        data=getData(l->value)
+        temp=getData(l->value);
         if (dataValidCheck(l->value.ora_min,temp,t)==0){
             return l->value;
         }
         l = l->next;
     }
     return NULLITEM;
-}
     printf("\n");
 }
