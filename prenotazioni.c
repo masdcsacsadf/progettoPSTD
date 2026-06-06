@@ -15,6 +15,19 @@ typedef struct{
     int flagCheckIn;//inidica se lo studente ha fatto il check-in della prnotazione
 }prenotazioni;
 
+prenotazioni inizializzaPren(){
+    
+     prenotazioni p;
+
+    p.matricolastud=0;
+    p.ora_min=0;
+    p.ora_max=0;
+    p.data=inizializzaData();
+    p.postoass=0;
+    p.flagCheckIn=0;
+     return  p;
+}
+
 
 struct node {
     prenotazioni value;
