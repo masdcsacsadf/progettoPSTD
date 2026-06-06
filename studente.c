@@ -11,6 +11,17 @@ typedef struct{
 /*variabile 'stato' server per controllare se lo studente :ha il posto =2 o ha prenotato=1 o sta aspettano nella coda di attessa =0, valore neutro = -1 */
 }studente;
 
+studente inizializzaStud(){
+    studente s;
+
+    s.nome[100]="\0";
+    s.matricola=0;
+    s.corso[100]="\0";
+    s.stato=-1;
+
+    return s;
+}
+
 int getMatricola(studente s){
     return s.matricola;
 }
