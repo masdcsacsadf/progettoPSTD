@@ -1,8 +1,11 @@
 typedef struct studente * s;
-typedef struct list * l;
-typedef struct node * l;
-
+typedef struct node *list3;
+#define LUNG 100
 //funzioni studente
+
+studente inizializzaStud();
+
+#define NULLITEM inizializzaStud();
 
 int getMatricola(studente s);
 
@@ -18,13 +21,13 @@ void setCorso(studente s, char co);
 
 //funzioni lista
 
-list newList(void);
+list3 newList(void);
 
-int cicle(int m, list l);
+int cicle(int m, list3 l);
 
-int emptyList(list l);
+int emptyList(list3 l);
 
-list consList(studente val, list l);
+list3 consList(studente val, list3 l);
 
 //list tailList(list l);
 //
