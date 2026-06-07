@@ -65,7 +65,7 @@ studente ricercaMatricola(list3 l, int m){
 
     }
 
-    return NULLITEM;
+    return NULLITEMSTUD;
 }
 
 void ricercaSettaStato(list3 l, int m, int v){
@@ -97,7 +97,7 @@ int emptyList(list3 l) {
 }
 
 
-list3 consList(studente val, list3 l) {
+list3 consList3(studente val, list3 l) {
     list3 new_node = (list3)malloc(sizeof(struct node));
     if (new_node == NULL) {
         fprintf(stderr, "Errore: impossibile allocare memoria per il nuovo nodo.\n");
@@ -159,6 +159,6 @@ studente getItem(list3 l, int pos) {
         count++;
         l = l->next;
     }
-    return NULLITEM;
+    return NULLITEMSTUD;
 }
 
