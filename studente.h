@@ -1,11 +1,11 @@
-typedef struct studente * s;
+typedef struct studente *studente;
 typedef struct node *list3;
 #define LUNG 100
 //funzioni studente
 
 studente inizializzaStud();
 
-#define NULLITEM inizializzaStud();
+#define NULLITEMSTUD inizializzaStud();
 
 int getMatricola(studente s);
 
@@ -27,7 +27,7 @@ int cicle(int m, list3 l);
 
 int emptyList(list3 l);
 
-list3 consList(studente val, list3 l);
+list3 consList3(studente val, list3 l);
 
 //list tailList(list l);
 //
