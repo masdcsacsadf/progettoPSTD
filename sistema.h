@@ -1,5 +1,5 @@
 
-typedef struct dati *t;
+typedef struct dati *dati;
 
 void prenotazione(dati *t);
 
