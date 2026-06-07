@@ -215,3 +215,18 @@ prenotazioni getPrenotazioneControl(list l, dataCorrente t) {
     return NULLITEM;
     printf("\n");
 }
+
+prenotazioni ciclo(list l, int ora, data dat, int m){
+
+    while (l!=NULL)
+    {
+        if (dateUgualiData( l->value.data, dat, ora, l->value.ora_min) == 1 && l->value.matricolastud == m)
+        {
+            setFlag(l->value, 1);
+            return l->value;
+        }
+
+    }
+
+    return NULLITEM;
+}
