@@ -1,4 +1,4 @@
-typedef struct posti;
+typedef struct posti *posti;
 
 int getStatus();
 
