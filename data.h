@@ -4,7 +4,7 @@ typedef struct dataCorrente *dataCorrente;
 
 data inizializzaData();
 
-#define NULLITEM inizializzaData();
+#define NULLITEMDATA inizializzaData();
 
 int getAnno(data t);
 
